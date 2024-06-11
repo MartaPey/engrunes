@@ -1,17 +1,20 @@
 :root{
     --fondo: #F4F5F9;
-    --color-encima: #ffffff; 
+    --color-encima: #ffffff20; 
+    --color-borde: #ffffff20;
     --color-text: #000000;
     --filter-icons:none;
     --lila:#914EFF;
-    --header-color:#914EFF;
+    --header-color:#ffffff;
     --filter-negative: none;
 }
 
 .dark-mode{
     --fondo:#151515;
-    --color-encima: #2B2B2B;
-     --color-text: #ffffff;
+    --header-color: #ffffff20;
+    --color-encima: #000000d6; 
+    --color-borde: #ffffff50;
+    --color-text: #ffffff;
     --filter-icons:invert(100%);
     --filter-negative: none;
 }
@@ -23,9 +26,10 @@ html {
     font-family: 'Inter', 'Arial', sans serif;
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     transition: background-color 0.3s;
+    position:fixed;
 }
 
 
@@ -42,7 +46,7 @@ html {
 
 
 h1 {
-    font-size: 50px;
+    font-size: 10rem;
     line-height: 0.8em;
     letter-spacing: -0.05em;
     font-weight: 400;
@@ -56,6 +60,7 @@ h2 {
     font-weight: 400;
     letter-spacing: -0.05em;
     margin: 0;
+     color: var(--color-text);
 }
 
 h3 {
@@ -64,6 +69,7 @@ h3 {
     font-weight: 400;
     letter-spacing: -0.05em;
     margin: 0;
+     color: var(--color-text);
 }
 
 p {
@@ -134,15 +140,26 @@ a {
 }
 
 #overlay {
-    display: none;
+    display: flex;
     box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.1);
      z-index: 100;
+    left:-100%;
+    transition: left 0.5s ease, opacity 0.5s ease;
+    opacity:0;
+    pointer-events: none;
     
+}
+
+#overlay.show {
+    left: 0; /* Move to the final position */
+    opacity: 1;
+    pointer-events: all;
 }
 
 #overlay-2 {
    display: none;
     z-index: 1000;
+  
    
     
     
@@ -186,6 +203,7 @@ position: fixed;
     height: 100vh;
     width: auto;
     left:0;
+    top:0
     
 
 }
@@ -193,8 +211,8 @@ position: fixed;
 .header-display {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-encima);
-    
+    background-color: var(--header-color);
+    background-blend-mode: overlay;
 
     margin: 1rem;
    width: auto;
@@ -285,6 +303,15 @@ position:absolute;
     margin: 0;
 
 }
+.hora-escriptori{
+    position:absolute;
+    right:2rem;
+    bottom:2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
 #draggable{
     position: absolute;
  
@@ -295,36 +322,43 @@ position:absolute;
 
     display: flex;
     flex-direction: column;
-   background-color: var(--color-encima);
+   background-color: #ffffff10;
   
-    border-radius: 14px;
+    border-radius: 30px;
     height:100%;
    width:100%;
     overflow:hidden;
   
+}
+.capitol p{
+    color:black;
 }
 
 .arxius {
     position:relative;
     display: flex;
     flex-direction: column;
-    background-color: var(--color-encima);
+   background-color: var(--color-encima);
+    background-blend-mode: overlay;
      backdrop-filter: blur(30px);
    left:100px;
-    border-radius: 14px;
+    border-radius: 30px;
     height:70vh;
    width:40vw;
     overflow:hidden;
+    border:1px;
+    border-color: var(--color-borde);
+    border-style:solid;
+   
    
    
 }
 
 .header-arxius {
-     background: var(--header-color);
- border-radius: 14px 14px 0 0;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 1rem;
+    align-items: center;
 
 }
 
@@ -334,7 +368,6 @@ position:absolute;
     display: flex;
     flex-direction: column;
     border-radius: 0 0 14px 14px;
-background-color: var(--color-encima);
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -427,15 +460,7 @@ background-color: var(--color-encima);
     
      //***padding-right:0.5rem;***//
 }
-.container h1{
-    color:black;
-}.container h2{
-    color:black;
-}.container h3{
-    color:black;
-}.container p{
-    color:black;
-}
+
 
 
 .container-capitol::-webkit-scrollbar {
@@ -533,19 +558,42 @@ width:100vw;
         height: 100vh;
        
     }
+#overlay {
+    
+    bottom:-100%;
+    left:0;
+  
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+    
+    
+}
 
+#overlay.show {
+
+         left:0;
+    bottom: 5rem; /* Move to the final position */
+     transition: bottom 0.5s ease, opacity 0.5s ease;
+   
+   
+}
+    
     .arxius {
         height: auto;
-        width: auto;
+        width: 70%;
+        
         position:absolute;
-        left:1rem;
-        top:1rem;
-        right:1rem;
-         bottom:5rem;
+        margin-left:1rem;
+        margin-top:10rem;
+        margin-right:1rem;
         
         align-content: center;
         
     }
+    .arxius h3{
+        font-size:20px;
+       
+    }
+    
 
 
     .carpeta-text {
@@ -561,6 +609,7 @@ width:100vw;
     
     #draggable{
         position:static;
+        
     }
     .container-escritorio{
    left:1rem;

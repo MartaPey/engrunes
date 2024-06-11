@@ -46,13 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Abrir overlay
 
-function toggleFunction1(element) {
-    if (element.classList.contains('active')) {
-         document.getElementById("overlay").style.display = "none";
+function toggleOverlay() {
+    var overlay = document.getElementById('overlay');
+    if (overlay.classList.contains('show')) {
+        overlay.classList.remove('show');
     } else {
-        document.getElementById("overlay").style.display = "flex";
+        overlay.classList.add('show');
     }
 }
+
+document.querySelector('.navbar-link img').addEventListener('click', function() {
+    toggleOverlay();
+});
+
 
 function toggleFunction2(element) {
     if (element.classList.contains('active')) {
