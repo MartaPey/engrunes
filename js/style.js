@@ -34,7 +34,7 @@ function off() {
 //Cambiar color boton a lila al hacer click
 
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleElements = document.querySelectorAll('.navbar-link');
+    const toggleElements =document.getElementById('toggle-element');
 
     toggleElements.forEach(element => {
         element.addEventListener('click', () => {
@@ -55,18 +55,24 @@ function toggleOverlay() {
     }
 }
 
-document.querySelector('.navbar-link img').addEventListener('click', function() {
+// Asigna la función toggleOverlay al primer botón
+document.querySelector('.navbar-link').addEventListener('click', function() {
     toggleOverlay();
 });
 
-
-function toggleFunction2(element) {
-    if (element.classList.contains('active')) {
-         document.getElementById("overlay-2").style.display = "none";
+function toggleOverlay2() {
+    var overlay2 = document.getElementById('overlay-2');
+    if (overlay2.classList.contains('show')) {
+        overlay2.classList.remove('show');
     } else {
-        document.getElementById("overlay-2").style.display = "flex";
+        overlay2.classList.add('show');
     }
 }
+
+// Asigna la función toggleOverlay2 al segundo botón (la imagen dentro del div)
+document.querySelector('.navbar-link img').addEventListener('click', function() {
+    toggleOverlay2();
+});
 
 //Darkmode
 document.addEventListener('DOMContentLoaded', () => {
@@ -109,3 +115,26 @@ document.addEventListener('DOMContentLoaded', () => {
       vineta.style.height = vineta.offsetWidth * aspectRatio + 'px';
     };
   });
+
+//Hora
+
+       function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
