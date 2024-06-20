@@ -74,7 +74,7 @@
                                             <p> Com deia, un dia esgotador.
                                             </p>
                                         </div>
-                                        <div class="bafarada" style="width:50%; margin-top:20rem;">
+                                        <div class="bafarada" style="width:50%; margin-top:20%;">
                                             <p> Per sort m'acompanya la Dody, la amiga que m'ajuda a mantenir l'estabilitat mental que jo mateixa em dedico a destrossar.
                                             </p>
                                         </div>
@@ -123,8 +123,11 @@
                 <div class="arxius" id="overlay">
 
                     <div class="header-arxius" id=draggable-header>
+                        <div style="display:flex;align-items: center; gap:1rem;">
+                            <img src="icons/icon-folders.svg">
 
-                        <h3>Capítols</h3>
+                            <h3>Capítols</h3>
+                        </div>
                         <div style="display:flex; align-items: center; gap:1rem;">
                             <a class="navbar-link" style="padding:0;">
                                 <img src="images/foto-perfil.png" style="border-radius: 100%; filter:none; ">
@@ -253,36 +256,34 @@
             </div>
 
         </div>
-        <header class="header cap">
-            <div class="header-display">
+         <header class="header">
+                    <div class="header-display">
 
 
 
 
 
-                <a href="escriptori.html" class="navbar-link">
-                    <img src="icons/icon-home.svg">
+                        <a href="escriptori.html" class="navbar-link">
+                            <img src="icons/icon-home.svg">
 
-                </a>
-
-
+                        </a>
 
 
-                <a class="navbar-link" id="mode-toggle-button">
-                    <img src="icons/icon-mode.svg">
-
-                </a>
-                <a class="navbar-link active" onclick="toggleOverlay()" id="toggle-element">
-                    <img src="icons/icon-folders.svg">
-
-                </a>
-
-                <a href="https://www.instagram.com/martapey.art" target="_blank" class="navbar-link">
-                    <img src="icons/icon-instagram.svg">
-
-                </a>
 
 
+                        <a class="navbar-link" id="mode-toggle-button">
+                            <img src="icons/icon-mode.svg">
+
+                        </a>
+                        <a class="navbar-link active" onclick="toggleOverlay()">
+                            <img src="icons/icon-folders.svg">
+
+                        </a>
+
+                        <a href="https://www.instagram.com/martapey.art" target="_blank" class="navbar-link">
+                            <img src="icons/icon-instagram.svg">
+
+                        </a>
 
 
 
@@ -291,30 +292,31 @@
 
 
 
-                <a class="navbar-link" onclick="toggleFunction2(this)" id="toggle-element">
-                    <img src="icons/icon-power.svg">
-                </a>
 
 
-                <div id="overlay-2">
-                    <li class="power-nav side">
-                        <ul> <a href="index.html">
-                                <img src="icons/icon-logout.svg">
-                                Tancar sessió
-                            </a>
-                        </ul>
-                        <ul> <a href="apagar.html">
-                                <img src="icons/icon-power.svg">
-                                Apagar
-                            </a>
-                        </ul>
-                    </li>
+                        <a class="navbar-link" onclick="toggleOverlay2()" id="toggle-element">
+                            <img src="icons/icon-power.svg">
+                        </a>
 
 
-                </div>
-            </div>
-        </header>
+                        <div id="overlay-2">
+                            <li class="power-nav side">
+                                <ul> <a href="index.html">
+                                        <img src="icons/icon-logout.svg">
+                                        Tancar sessió
+                                    </a>
+                                </ul>
+                                <ul> <a href="apagar.html">
+                                        <img src="icons/icon-power.svg">
+                                        Apagar
+                                    </a>
+                                </ul>
+                            </li>
 
+
+                        </div>
+                    </div>
+                </header>
 
 
 

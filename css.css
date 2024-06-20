@@ -7,7 +7,7 @@
 :root {
     --fondo: #eaedf5;
     --color-encima: #ffffffcc;
-    --color-borde: #ffffff10;
+    --color-borde: #00000010;
     --filter-encima: overlay;
     --color-text: #000000;
     --filter-icons: none;
@@ -16,7 +16,7 @@
     --filter-negative: none;
     --lila: #914EFF;
     --transparent-light: #b9b9b950;
-    --ombra01: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    --ombra01: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -24,8 +24,8 @@
     --fondo: #151515;
     --header-color: #ffffff20;
     --color-encima: #2f2f2fcc;
-    --filter-encima:;
-        --color-borde: #ffffff50;
+    --filter-encima: ;
+    --color-borde: #ffffff10;
     --color-text: #ffffff;
     --filter-icons: invert(100%);
     --filter-negative: none;
@@ -38,8 +38,8 @@ html {
     font-family: 'Inter', 'Arial', sans serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     transition: background-color 0.3s;
     position: fixed;
 }
@@ -49,8 +49,8 @@ html {
     background: url(images/texture.jpg);
     position: absolute;
     mix-blend-mode: difference;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     top: 0;
     opacity: 20%;
@@ -58,7 +58,7 @@ html {
 
 
 h1 {
-    font-size: 10rem;
+    font-size: 5rem;
     line-height: 0.8em;
     letter-spacing: -0.05em;
     font-weight: 400;
@@ -97,8 +97,13 @@ a {
     color: var(--color-text);
 }
 
+main {
+    height: 100%;
+    width: 100%;
+}
+
 .main-content {
-    height: 100vh;
+    height: 100%;
     display: flex;
 
     justify-content: center;
@@ -148,12 +153,15 @@ a {
     display: flex;
 
     right: 5rem;
-    bottom: 1rem;
+    bottom: 3rem;
     position: fixed;
 }
 
 #draggable {
     pointer-events: none;
+    width: 40%;
+    height: 70%;
+    left: 5rem;
 }
 
 #overlay {
@@ -165,10 +173,12 @@ a {
     opacity: 0;
     pointer-events: none;
 
+
 }
 
 #overlay.show {
     left: 0;
+
     /* Move to the final position */
     opacity: 1;
     pointer-events: all;
@@ -176,9 +186,10 @@ a {
 
 #overlay-2 {
     display: flex;
-    z-index: 1000;
+    z-index: 100;
     position: absolute;
     opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 #overlay-2.show {
@@ -197,12 +208,16 @@ a {
     padding: 1rem;
     border-radius: 14px;
     right: 5rem;
-    bottom: 5rem;
+    bottom: 7rem;
     gap: 1rem;
     backdrop-filter: blur(30px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 
 }
+.power-nav a {
+        display: flex;
+        align-items: center;
+    }
 
 .power-nav.side {
 
@@ -224,6 +239,7 @@ a {
 .power-nav ul img {
     margin-right: 1rem;
     align-items: center;
+    filter:var(--filter-icons);
 }
 
 
@@ -231,7 +247,7 @@ a {
     position: fixed;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     width: auto;
     left: 0;
     top: 0;
@@ -279,7 +295,11 @@ a {
     width: 1.7rem;
     filter: var(--filter-icons);
 }
+
+.navbar-link.active img {
+    filter: invert(100%);
 }
+
 
 .header a:hover {
     text-decoration: none;
@@ -291,9 +311,9 @@ a {
 
 
 .container {
-    height: 100vh;
+    height: 100%;
     /* Altura completa de la pantalla */
-    width: 100vw;
+    width: 100%;
     display: flex;
     /* Utiliza Flexbox para centrar .carpeta */
     justify-content: center;
@@ -326,11 +346,11 @@ a {
 }
 
 .container-escritorio {
-    display:flex;
+    display: flex;
     flex-direction: column;
     position: absolute;
-  
-   align-items: flex-end;
+
+    align-items: flex-end;
     left: 5.3rem;
     right: 1rem;
     top: 1rem;
@@ -344,7 +364,7 @@ a {
     width: fit-content;
     height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 1rem;
     background-color: var(--header-color);
     backdrop-filter: blur(30px);
@@ -363,6 +383,7 @@ a {
     align-content: center;
     justify-content: center;
     text-align: center;
+    gap: 0.5rem;
 
 }
 
@@ -370,6 +391,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 0.5rem;
 }
 
 .calendari-escriptori .dies p {
@@ -378,11 +400,32 @@ a {
 
 }
 
-.spotify-link{
-    width:fit-content;
-    height:fit-content;
-    
-    padding:1rem;
+.calendari-to-do li {
+    border-left: 0.3rem solid var(--lila);
+    padding-left: 0.7rem;
+
+    color: var(--color-text);
+    font-size: 20px;
+
+}
+
+.calendari-escriptori li p {
+
+    opacity: 50%;
+
+}
+
+.calendari-to-do ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.spotify-link {
+    width: fit-content;
+    height: fit-content;
+
+    padding: 1rem;
 }
 
 .escritorio .logo-fons {
@@ -397,7 +440,7 @@ a {
     top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     gap: 1rem;
     padding: 1rem;
 
@@ -416,18 +459,18 @@ a {
     display: flex;
     flex-direction: column;
     background-color: var(--color-encima);
-   
+
 
     border-radius: 30px;
     height: 100%;
     width: 100%;
     overflow: hidden;
-box-shadow: var(--ombra01);
-     backdrop-filter: blur(30px);
-    
+    box-shadow: var(--ombra01);
+    backdrop-filter: blur(30px);
+
 }
 
-.capitol p {
+/**.capitol p {
     color: black;
     font-family: 'Engrunes';
     font-size: 40px;
@@ -435,7 +478,7 @@ box-shadow: var(--ombra01);
     letter-spacing: 0;
     
 }
-
+**/
 .arxius {
     position: relative;
     display: flex;
@@ -445,8 +488,8 @@ box-shadow: var(--ombra01);
     backdrop-filter: blur(30px);
     left: 100px;
     border-radius: 30px;
-    height: 70vh;
-    width: 40vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     border: 1px;
     border-color: var(--color-borde);
@@ -474,8 +517,8 @@ box-shadow: var(--ombra01);
     padding: 1rem;
     align-items: center;
 
-   
-    
+
+
 
 }
 
@@ -500,7 +543,7 @@ box-shadow: var(--ombra01);
     border-radius: 14px;
     height: 100%;
     width: 100%;
-      background-blend-mode:multiply;
+    background-blend-mode: multiply;
     background-color: var(--transparent-light);
     overflow: hidden;
     justify-content: space-between;
@@ -508,16 +551,16 @@ box-shadow: var(--ombra01);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-right:1rem;
-    padding-left:1rem;
-   
+    padding-right: 1rem;
+    padding-left: 1rem;
+
 
 
 }
 
 .carpeta.active {
     background-color: #914eff;
-   
+
     opacity: 100%;
 }
 
@@ -542,10 +585,10 @@ box-shadow: var(--ombra01);
 
 .carpeta-text {
 
-   
+
     color: white;
-padding-top:1rem;
-    padding-bottom:1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -592,7 +635,7 @@ padding-top:1rem;
     overflow-y: scroll;
     background-color: white;
     color: black;
-   
+
     filter: var(--filter-negative);
 
 
@@ -603,15 +646,15 @@ padding-top:1rem;
 
 .container-capitol::-webkit-scrollbar {
     width: 0.7em;
-     background-color: transparent;
-    
+    background-color: transparent;
+
 
 
 
 }
 
 .container-capitol::-webkit-scrollbar-track {
-     background-color: transparent;
+    background-color: transparent;
 }
 
 .container-capitol::-webkit-scrollbar-thumb {
@@ -626,7 +669,7 @@ padding-top:1rem;
 /**capitol1**/
 .vineta {
     position: relative;
-display:flex;
+    display: flex;
     flex-direction: column;
 
     background-size: cover;
@@ -644,21 +687,22 @@ display:flex;
     /* Por ejemplo, para una relación de aspecto 16:9 */
 }
 
-.bafarades{
-    position:absolute;
-    display:flex;
+.bafarades {
+    position: absolute;
+    width:100%;
+    display: flex;
     flex-direction: column;
 }
 
 .bafarada {
-    
-   
+
+
     padding: 1rem;
-    
+
     border: 1px solid #111;
-    
+
     border-color: black;
-   
+
     border-radius: 14px;
     background-color: white;
     z-index: 10;
@@ -675,6 +719,7 @@ display:flex;
 }
 
 @media (max-width: 768px) {
+
     .container {
         align-items: flex-start;
     }
@@ -686,7 +731,7 @@ display:flex;
         /* Dirección horizontal para móviles */
         height: 6rem;
         /* Altura fija para el header horizontal */
-        width: 100vw;
+        width: 100%;
         /* Ancho completo para el header horizontal */
         justify-content: space-around;
         bottom: 0;
@@ -696,41 +741,71 @@ display:flex;
 
     .header-display {
         flex-direction: row;
-        width: 100vw;
+        width: 100%;
 
-        
-        gap:1rem;
+
+        gap: 1rem;
         margin: 0;
 
     }
-   
-    
+
+
 
     .main-content {
         flex-direction: column;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
 
+    }
+
+    .hora-escriptori {
+        width: -webkit-fill-available;
+        margin-top: 20%;
+        align-items: center;
     }
 
     .calendari-escriptori {
 
-        width: -webkit-fill-available;
-        max-width: 25rem;
-        align-items: stretch;
-    }
-    
-.spotify-link{
-    width:-webkit-fill-available;
-    height:fit-content;
-    
-    padding:1rem;
-}
-    #overlay {
 
+        width: -webkit-fill-available;
+        max-width: 40rem;
+        align-items: stretch;
+
+
+
+
+    }
+
+    .calendari-escriptori li {
+        font-size: 14px;
+
+    }
+
+    .calendari-escriptori p {
+        font-size: 14px;
+
+
+
+    }
+
+    .calendari-escriptori .dies p {
+        font-size: 14px;
+        padding: 0.1rem;
+    }
+
+
+    .spotify-link {
+        width: -webkit-fill-available;
+        height: fit-content;
+
+        padding: 1rem;
+    }
+
+    #overlay {
+        top: auto;
         bottom: -100%;
         left: 0;
-
+        height: 50%;
         transition: bottom 0.5s ease, opacity 0.5s ease;
 
 
@@ -738,7 +813,7 @@ display:flex;
     }
 
     #overlay.show {
-        top: auto;
+
         left: 0;
 
         bottom: 0;
@@ -750,13 +825,13 @@ display:flex;
 
     .arxius {
 
-        width: 100vw;
+        width: 100%;
 
         position: absolute;
         margin: 0;
 
         align-content: center;
-        
+
 
     }
 
@@ -768,11 +843,11 @@ display:flex;
     .arxius p {
         font-size: 15px;
     }
-    
+
 
     .escritorio {
         height: 100%;
-        width: 100vw;
+        width: 100%;
         padding: 1rem;
     }
 
@@ -782,19 +857,21 @@ display:flex;
         position: static;
 
     }
-    #draggable .header-arxius{
-       
+
+    #draggable .header-arxius {
+
         width: -webkit-fill-available;
-        
+
     }
-    .container-arxius{
-       
-        
-     height:100%;
+
+    .container-arxius {
+
+
+        height: 100%;
         overflow: scroll;
-       
-        justify-content:flex-start;
-        
+
+        justify-content: flex-start;
+
     }
 
     .container-escritorio {
@@ -805,27 +882,25 @@ display:flex;
         bottom: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
-        width: 100vw;
-        left: 0;
-        right: 0;
+        width: 100%;
+
 
 
     }
-    .capitol{
-    border-radius: 0;
-}
+
+    .capitol {
+        border-radius: 0;
+    }
 
     .power-nav {
         left: auto;
         right: 1rem;
         bottom: 4.5rem;
     }
-    .power-nav a{
-        display:flex;
-        align-items: center;
-    }
+
+    
 
     .container-capitol {
         padding-right: 0.2rem;
@@ -834,19 +909,15 @@ display:flex;
 
     .container-capitol::-webkit-scrollbar {
         width: 0.3em;
-       
-
     }
-    
+
 
     .vineta.vin1 {
         margin-top: 10rem;
     }
- 
+
 
     .bafarada {
-
-        position: absolute;
         margin: 1rem;
         top: 0;
         bottom: auto;
@@ -858,7 +929,7 @@ display:flex;
     }
 
     .power-button {
-
+        bottom: 1rem;
         right: 2rem;
     }
 
@@ -869,9 +940,5 @@ display:flex;
         bottom: 5rem;
         transform: translate(0%, 0%);
     }
-
-
-
-}
 
 }
