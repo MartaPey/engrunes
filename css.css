@@ -193,6 +193,7 @@ main {
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 #overlay-2.show {
@@ -203,6 +204,7 @@ main {
     
     opacity: 0;
     transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 #overlay-3.show {
@@ -213,6 +215,7 @@ main {
     
     opacity: 0;
     transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 #overlay-4.show {
@@ -223,6 +226,7 @@ main {
     
     opacity: 0;
     transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 #overlay-5.show {
