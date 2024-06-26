@@ -12,11 +12,13 @@
     --color-text: #000000;
     --filter-icons: none;
     --lila: #914EFF;
+    --lila-light: #914EFF30;
     --header-color: #ffffff;
     --filter-negative: none;
     --lila: #914EFF;
     --transparent-light: #b9b9b950;
     --ombra01: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    --fons-portada:url(images/portada_light.PNG);
 
 }
 
@@ -29,6 +31,7 @@
     --color-text: #ffffff;
     --filter-icons: invert(100%);
     --filter-negative: none;
+    --fons-portada: url(images/portada_dark.PNG);
 }
 
 
@@ -196,7 +199,36 @@ main {
     opacity: 1;
     pointer-events: all;
 }
+#overlay-3 {
+    
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
 
+#overlay-3.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#overlay-4 {
+    
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#overlay-4.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#overlay-5 {
+    
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#overlay-5.show {
+    opacity: 1;
+    pointer-events: all;
+}
 
 .power-nav {
     position: fixed;
@@ -320,6 +352,11 @@ main {
     /* Centra horizontalmente */
     align-items: center;
     /* Centra verticalmente */
+    
+    background: var(--fons-portada);
+    
+    background-position: center;
+    background-size: cover;
 }
 
 .escritorio {
@@ -429,7 +466,8 @@ main {
 }
 
 .escritorio .logo-fons {
-    width: 50%;
+    position:absolute;
+    width:50%;
     margin: 0;
 
 }
@@ -635,6 +673,7 @@ main {
     overflow-y: scroll;
     background-color: white;
     color: black;
+    height:-webkit-fill-available;
 
     filter: var(--filter-negative);
 
@@ -676,22 +715,19 @@ main {
     background-repeat: no-repeat;
 
     width: 100%;
-
+height: fit-content;
 
 }
 
-.vineta::before {
-    content: "";
-    display: block;
-    padding-bottom: 150%;
-    /* Por ejemplo, para una relación de aspecto 16:9 */
-}
+
 
 .bafarades {
     position: absolute;
     width:100%;
     display: flex;
     flex-direction: column;
+    height:-webkit-fill-available;
+    
 }
 
 .bafarada {
@@ -708,7 +744,87 @@ main {
     z-index: 10;
 
 }
+.baf-img{
+    width:30%;
+    margin-top:10%;
+}
 
+
+.baf-img.left{
+    
+    margin-left:3%;
+     align-self: flex-start;
+}
+.baf-img.right{
+   
+    margin-right: 3%;
+     align-self: flex-end;
+}
+.baf-img.center{
+     align-self: center;
+}
+.scan{
+    display:flex;
+    width:100%;
+    height:100%;
+    
+}
+.scan-object{
+    position:absolute;
+   height:40%;
+
+    
+   
+}
+.scan-info{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    
+    
+}
+
+.scan-info.up{
+    position:absolute;
+     display:flex;
+    flex-direction: column-reverse;
+    bottom:100%;
+    
+}
+
+.scan-button{
+ 
+     border: 0.2rem solid var(--lila);
+    width:8vw;
+    height:8vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--lila);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.scan-button:hover{
+    background:var(--lila-light);
+    
+}
+.scan-text{
+   
+    display:flex;
+    flex-direction: column;
+    background-color: var(--lila-light);
+    backdrop-filter: blur(30px);
+    padding:2rem;
+    gap:1rem;
+    bottom:50rem;
+    border-radius: 14px;
+}
+.scan-line{
+    height: 70%;
+    width:auto;
+    border-left: 0.2rem solid var(--lila);
+}
 .agraiment {
     display: flex;
     flex-direction: column;
@@ -893,6 +1009,15 @@ main {
     .capitol {
         border-radius: 0;
     }
+    .scan-text{ 
+        padding:0.5rem;
+    }
+    .scan h3{
+        font-size: 16px;
+    }
+    .scan p{
+        font-size: 10px;
+    }
 
     .power-nav {
         left: auto;
@@ -912,9 +1037,7 @@ main {
     }
 
 
-    .vineta.vin1 {
-        margin-top: 10rem;
-    }
+    
 
 
     .bafarada {

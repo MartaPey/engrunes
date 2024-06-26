@@ -69,10 +69,28 @@ function toggleOverlay2() {
     }
 }
 
+
 // Asigna la función toggleOverlay2 al segundo botón (la imagen dentro del div)
 document.querySelector('.navbar-link img').addEventListener('click', function() {
     toggleOverlay2();
 });
+
+
+
+
+
+//Scan overlay
+
+
+function toggleOverlay3(id) {
+    var overlay3 = document.getElementById(id);
+    if (overlay3.classList.contains('show')) {
+        overlay3.classList.remove('show');
+    } else {
+        overlay3.classList.add('show');
+    }
+}
+
 
 //Darkmode
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,28 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
- // JavaScript para ajustar la altura del contenedor en función de la imagen de fondo
-   // JavaScript para ajustar la altura del contenedor en función de la imagen de fondo
-  window.addEventListener('load', function() {
-    var vineta = document.getElementById('vineta1');
-    var img = new Image();
-    img.src = 'images/capitol1/01001.PNG';
-    img.onload = function() {
-      var aspectRatio = img.height / img.width;
-      vineta.style.height = vineta.offsetWidth * aspectRatio + 'px';
-    };
-  });
 
-  // Ajustar la altura en caso de redimensionar la ventana
-  window.addEventListener('resize', function() {
-    var vineta = document.getElementById('vineta1');
-    var img = new Image();
-    img.src = 'images/capitol1/01001.PNG';
-    img.onload = function() {
-      var aspectRatio = img.height / img.width;
-      vineta.style.height = vineta.offsetWidth * aspectRatio + 'px';
-    };
-  });
 
 //Hora
 
@@ -138,3 +135,16 @@ i="0" + i;
 }
 return i;
 }
+
+//Numero random
+function generateRandomNumber() {
+            return Math.floor(Math.random() * 100); // Genera un número aleatorio entre 0 y 99
+        }
+
+        function updateRandomNumber() {
+            var randomNumberElement = document.getElementById('random-number');
+            randomNumberElement.textContent = generateRandomNumber();
+        }
+
+        // Actualiza el número aleatorio cada segundo (1000 milisegundos)
+        setInterval(updateRandomNumber, 100);
