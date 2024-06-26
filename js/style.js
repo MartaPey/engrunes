@@ -76,7 +76,11 @@ document.querySelector('.navbar-link img').addEventListener('click', function() 
 });
 
 
-
+//despliegue titulo projectes
+function toggleVisibility(id) {
+    var content = document.getElementById(id);
+    content.classList.toggle('show');
+}
 
 
 //Scan overlay
