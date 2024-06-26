@@ -12,7 +12,7 @@
     --color-text: #000000;
     --filter-icons: none;
     --lila: #914EFF;
-    --lila-light: #914EFF30;
+    --lila-light: #914EFF80;
     --header-color: #ffffff;
     --filter-negative: none;
     --lila: #914EFF;
@@ -678,7 +678,7 @@ main {
     background-color: white;
     color: black;
     height:-webkit-fill-available;
-    width:-webkit-fill-available;
+    width:100%;
 
     filter: var(--filter-negative);
 
