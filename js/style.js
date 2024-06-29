@@ -95,6 +95,38 @@ function toggleOverlay3(id) {
     }
 }
 
+//guardiola
+
+function toggleImages1() {
+            const image1 = document.getElementById('guardiola1');
+            const image2 = document.getElementById('guardiola2');
+ 
+
+            if (image1.style.display === 'none') {
+                image1.style.display = 'block';
+                image2.style.display = 'none';
+            } else {
+                image1.style.display = 'none';
+                image2.style.display = 'block';
+            }
+        }
+
+//radiografia
+function toggleImages2() {
+            const image3 = document.getElementById('radiografia1');
+            const image4 = document.getElementById('radiografia2');
+ 
+
+            if (image3.style.display === 'none') {
+                image3.style.display = 'block';
+                image4.style.display = 'none';
+            } else {
+                image3.style.display = 'none';
+                image4.style.display = 'block';
+            }
+        }
+
+
 
 //Darkmode
 document.addEventListener('DOMContentLoaded', () => {
