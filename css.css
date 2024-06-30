@@ -702,6 +702,7 @@ main {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    overflow-x: hidden;
     background-color: white;
     color: black;
     height: -webkit-fill-available;
@@ -945,9 +946,74 @@ main {
 .guardiola {
     display: none;
 }
+.vineta.concert{
+    position: relative;
+           
+}
+
+.imatge-concert{
+     position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+   
+}
 
 
 
+#concert2{
+   
+    opacity:0;
+}
+
+ input[type=range] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 10px; /* Altura del slider */
+            background-color: #ddd; /* Color del riel del slider */
+            border-radius: 5px; /* Borde redondeado */
+            outline: none;
+            margin: 0; /* Espacio alrededor del slider */
+     align-self: left;
+
+  
+     
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px; /* Ancho del control deslizante */
+            height: 20px; /* Altura del control deslizante */
+            background-color: var(--lila); /* Color del control deslizante */
+            border-radius: 50%; /* Forma circular */
+            cursor: pointer;
+        }
+        input[type=range]::-moz-range-thumb {
+            width: 20px; /* Ancho del control deslizante para Firefox */
+            height: 20px; /* Altura del control deslizante para Firefox */
+            background-color: var(--lila); /* Color del control deslizante para Firefox */
+            border-radius: 50%; /* Forma circular para Firefox */
+            cursor: pointer;
+        }
+@keyframes shake-little {
+   
+
+    10% {
+        transform: translate(1px, 1px) rotate(.2deg);
+    }
+   
+
+    
+}
+.shake{
+    animation-name:shake-little;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
 .agraiment {
     display: flex;
     flex-direction: column;
@@ -1177,9 +1243,7 @@ main {
 
 
 
-    .container-capitol {
-        padding-right: 0.2rem;
-    }
+   
 
 
     .container-capitol::-webkit-scrollbar {

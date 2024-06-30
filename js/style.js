@@ -127,6 +127,13 @@ function toggleImages2() {
         }
 
 
+//concert
+ document.getElementById('slider').addEventListener('input', function() {
+            var sliderValue = this.value;
+            var concert2 = document.getElementById('concert2');
+            concert2.style.opacity = sliderValue / 100;
+        });
+
 
 //Darkmode
 document.addEventListener('DOMContentLoaded', () => {
