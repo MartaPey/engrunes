@@ -136,6 +136,7 @@ function toggleImages2() {
 
 
 //Darkmode
+
 document.addEventListener('DOMContentLoaded', () => {
     const modeToggleButton = document.getElementById('mode-toggle-button');
 

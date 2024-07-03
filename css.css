@@ -150,7 +150,7 @@ main {
 }
 
 .iniciar-sessio h3 {
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .power-button {
@@ -363,7 +363,6 @@ main {
     /* Centra verticalmente */
 
     background: var(--fons-portada);
-
     background-position: center;
     background-size: cover;
 }
@@ -820,6 +819,33 @@ main {
 .vineta h2 {
     color: black;
 }
+.vineta.last h3{
+    padding-left:1rem;
+    padding-right:1rem;
+    color:white;
+    margin-bottom:0.5rem;
+}
+.vineta.last p{
+   color:white;
+    max-width:50rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin-bottom:1rem;
+    
+}
+.vineta.last{
+    padding-top:10rem;
+    padding-bottom: 10rem;
+    
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   
+    align-self: center; 
+    background:black; 
+    
+}
 
 
 
@@ -1019,7 +1045,7 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 30rem;
+    max-width: 30rem;
     gap: 1rem;
 }
 
