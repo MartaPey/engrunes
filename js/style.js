@@ -30,6 +30,26 @@ function off() {
         }, { once: true });
     });
 
+//Darkmode
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modeToggleButton = document.getElementById('mode-toggle-button');
+
+    // Check for saved user preference in localStorage
+    const currentMode = localStorage.getItem('mode') || 'light';
+    if (currentMode === 'dark') {
+        document.getElementById('cuerpo').classList.add('dark-mode');
+    }
+
+    modeToggleButton.addEventListener('click', () => {
+        document.getElementById('cuerpo').classList.toggle('dark-mode');
+        
+        // Save the current mode in localStorage
+        const isDarkMode = document.getElementById('cuerpo').classList.contains('dark-mode');
+        localStorage.setItem('mode', isDarkMode ? 'dark' : 'light');
+    });
+});
+
 
 //Cambiar color boton a lila al hacer click
 
@@ -55,10 +75,6 @@ function toggleOverlay() {
     }
 }
 
-// Asigna la función toggleOverlay al primer botón
-document.querySelector('.navbar-link').addEventListener('click', function() {
-    toggleOverlay();
-});
 
 function toggleOverlay2() {
     var overlay2 = document.getElementById('overlay-2');
@@ -70,10 +86,7 @@ function toggleOverlay2() {
 }
 
 
-// Asigna la función toggleOverlay2 al segundo botón (la imagen dentro del div)
-document.querySelector('.navbar-link img').addEventListener('click', function() {
-    toggleOverlay2();
-});
+
 
 
 //despliegue titulo projectes
@@ -94,6 +107,22 @@ function toggleOverlay3(id) {
         overlay3.classList.add('show');
     }
 }
+
+//habilitats
+
+function toggleHabilitats() {
+    var overlayHab = document.getElementById('overlay-habilitats');
+    if (overlayHab.classList.contains('show')) {
+        overlayHab.classList.remove('show');
+    } else {
+        overlayHab.classList.add('show');
+    }
+}
+
+// Asigna la función toggleHabilitats al botón
+document.querySelector('.habilitats-button').addEventListener('click', toggleHabilitats);
+
+
 
 //guardiola
 
@@ -135,25 +164,8 @@ function toggleImages2() {
         });
 
 
-//Darkmode
 
-document.addEventListener('DOMContentLoaded', () => {
-    const modeToggleButton = document.getElementById('mode-toggle-button');
 
-    // Check for saved user preference in localStorage
-    const currentMode = localStorage.getItem('mode') || 'light';
-    if (currentMode === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
-
-    modeToggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        // Save the current mode in localStorage
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('mode', isDarkMode ? 'dark' : 'light');
-    });
-});
 
 
 
