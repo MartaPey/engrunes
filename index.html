@@ -16,26 +16,37 @@
     <link rel="stylesheet" href="css.css">
 </head>
 
-<body>
+<body class="" id="cuerpo">
+
+
     <main>
+
 
         <div class="main-content">
 
 
+
             <div class="iniciar-sessio">
-                <img src="images/foto-perfil02.png" style="width:20vw; border-radius: 100%">
+                <img src="images/foto-perfil02.png" style="width:20vh; border-radius: 100%">
                 <h3>Ema</h3>
                 <a href="escriptori.html" class="button">Iniciar sessió
                 </a>
-                
+
 
             </div>
             <div class="power-button">
 
 
-                <a class="navbar-link" onclick="toggleOverlay2()" id="toggle-element">
-                    <img src="icons/icon-power.svg">
-                </a>
+                <div class="button-container">
+
+
+
+                    <a class="navbar-link" onclick="toggleOverlay2()" id="toggle-element">
+                        <img src="icons/icon-power.svg">
+                    </a>
+                    <span class="hover-text" style="left:-250%;">Apagar</span>
+
+                </div>
                 <div id="overlay-2">
                     <li class="power-nav">
 
@@ -50,6 +61,7 @@
 
 
 
+
                 </div>
             </div>
 
@@ -57,6 +69,7 @@
 
 
         </div>
+
     </main>
 
     <script src="js/style.js"></script>

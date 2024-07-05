@@ -43,13 +43,18 @@
                             </div>
                             <!-- Contingut capitol -->
                             <div class="container-projecte">
-
+                               
+<div class="intro-projecte" style="display:flex; flex-direction: column;">
                                 <img class="icon-projecte" src="images/logo-lila.png">
-                                <div>
+                                <a href="capitol1.html" class="button" style="width: fit-content; ;">Llegir primer capítol <img src="icons/icon-arrow-right.svg">
+                </a>
+                                    </div>
+                                    
+                                <div style="display:flex; flex-direction: column; gap:1rem;">
                                     <div class="seccio">
 
 
-                                        <h2 onclick="toggleVisibility('despliegue-1')" style="cursor: pointer;margin-top: 5%;">El projecte <img src="icons/icon-arrow-down.svg"></h2>
+                                        <h2 onclick="toggleVisibility('despliegue-1')" style="cursor: pointer;margin-top: 5%;">El projecte <img src="icons/icon-arrow-down.svg" style=" filter: var(--filter-icons);"></h2>
 
                                         <div class="text-hidden" id="despliegue-1" style="  gap:1rem;">
 
@@ -70,7 +75,7 @@
 
                                     <div class="seccio">
 
-                                        <h2 onclick="toggleVisibility('despliegue-3')" style="cursor: pointer">Sinopsi <img src="icons/icon-arrow-down.svg"></h2>
+                                        <h2 onclick="toggleVisibility('despliegue-3')" style="cursor: pointer">Sinopsi <img src="icons/icon-arrow-down.svg" style=" filter: var(--filter-icons);"></h2>
                                         <div class="text-hidden" id="despliegue-3">
                                             <p>L’Ema és una jove de 21 anys que, un dia, al tornar a casa, no troba la seva llibreta. Acompanyada de Dody, una amiga imaginària que representa la seva consciència, decideix acusar a la seva germana, una persona amb la què té una relació freda i distant, percebuda com una persona impredecible, característica que altera la necessitat de control de l’Ema.
 
@@ -81,7 +86,7 @@
                                     <div class="seccio">
                                         <h2>Personatges</h2>
 
-                                        <h3 onclick="toggleVisibility('despliegue-4')" style="cursor: pointer">Ema <img src="icons/icon-arrow-down.svg"></h3>
+                                        <h3 onclick="toggleVisibility('despliegue-4')" style="cursor: pointer">Ema <img src="icons/icon-arrow-down.svg" style=" filter: var(--filter-icons);"></h3>
                                         <div class="text-hidden" id="despliegue-4">
                                             <p>La protagonista de la nostra història, l’Ema, es defineix com una persona introvertida (però no sempre ha estat així), amant dels videojocs i amb grans habilitats artístiques. Estudiant belles arts ha pogut combinar la seva passió per la literatura amb el dibuix, i viu motivada a crear grans projectes artístics.</p>
                                             <p>
@@ -96,23 +101,23 @@
                                             </p>
 
                                         </div>
-                                        <h3 onclick="toggleVisibility('despliegue-5')" style="cursor: pointer">Germana <img src="icons/icon-arrow-down.svg"></h3>
+                                        <h3 onclick="toggleVisibility('despliegue-5')" style="cursor: pointer">Germana <img src="icons/icon-arrow-down.svg" style=" filter: var(--filter-icons);"></h3>
                                         <div class="text-hidden" id="despliegue-5">
                                             <p>
 
 
-                                                La germana es defineix amb una personalitat forta, orgullosa i decidida. És segura de si mateixa, presumida i perfeccionista, fet que l’ha portat a tenir dificultats a l’hora d’assimilar els seus propis errors. </p>
+                                                La germana de l'Ema es defineix amb una personalitat forta, orgullosa i decidida. És segura de si mateixa, presumida i perfeccionista, fet que l’ha portat a tenir dificultats a l’hora d’assimilar els seus propis errors. </p>
                                             <p>
 
-                                                Tot i haver-se graduat fa cinc anys i tenir la pressió dels pares per independitzar-se, no es veu preparada per donar el pas a construir la seva vida adulta i segueix vivint amb la família. Això li genera una frustració interna però que, per la seva personalitat orgullosa, carrega silenciosament i es transforma en una actitud de fàcil irritabilitat i moments d’histèria.
+                                                Viu amb una frustració interna que, per la seva personalitat orgullosa, carrega silenciosament i es transforma en una actitud de fàcil irritabilitat i moments d’histèria.
                                             </p>
                                             <p>
 
-                                                Durant molts anys va actuar com a referent de l’Ema, ja que han crescut amb mancances d’atenció per part dels pares, i es va veure obligada a assumir responsabilitats i adoptar un rol adult en una edat temprana .
+                                                Durant molts anys va actuar com a referent de l’Ema, ja que han crescut amb mancances d’atenció per part dels pares, i es va veure obligada a assumir responsabilitats i adoptar un rol adult en una edat primerenca .
                                             </p>
                                             <p>
 
-                                                Actualment, l’Ema i la seva germana no tenen la millor de les relacions. Amb el temps han anat allunyant-se l’una de l’altra fins al punt de no suportar-se mutuament. Mentre l’Ema viu en el rencor, l’altre està dolguda i no entén el per què d’aquest distanciament. </p>
+                                                Actualment, l’Ema i la seva germana no tenen la millor de les relacions. Amb el temps han anat allunyant-se l’una de l’altra fins al punt de no suportar-se mútuament. Mentre l’Ema viu en el rancor, l’altre està dolguda i no entén el perquè d’aquest distanciament. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -270,43 +275,51 @@
 
 
 
+                <div class="button-container">
+                    <a href="escriptori.html" class="navbar-link">
+                        <img src="icons/icon-home.svg">
 
-                <a href="escriptori.html" class="navbar-link">
-                    <img src="icons/icon-home.svg">
+                    </a>
+                    <span class="hover-text">Escriptori</span>
+                </div>
 
-                </a>
+                <div class="button-container">
 
+                    <a class="navbar-link" id="mode-toggle-button">
+                        <img src="icons/icon-mode.svg">
 
+                    </a>
+                    <span class="hover-text">Mode</span>
+                </div>
 
+                <div class="button-container">
+                    <a class="navbar-link active" onclick="toggleOverlay()">
+                        <img src="icons/icon-folders.svg">
 
-                <a class="navbar-link" id="mode-toggle-button">
-                    <img src="icons/icon-mode.svg">
+                    </a>
+                    <span class="hover-text">Capítols</span>
+                </div>
 
-                </a>
-                <a class="navbar-link active" onclick="toggleOverlay()">
-                    <img src="icons/icon-folders.svg">
+                <div class="button-container">
 
-                </a>
-
-                <a href="https://www.instagram.com/martapey.art" target="_blank" class="navbar-link">
-                    <img src="icons/icon-instagram.svg">
-
-                </a>
-
-
-
-
-
-
-
-
-
-
-                <a class="navbar-link" onclick="toggleOverlay2()" id="toggle-element">
-                    <img src="icons/icon-power.svg">
-                </a>
+                    <a href="https://www.instagram.com/martapey.art" target="_blank" class="navbar-link">
+                        <img src="icons/icon-instagram.svg">
 
 
+                    </a>
+                    <span class="hover-text">Instagram</span>
+                </div>
+
+                <div class="button-container">
+
+
+
+                    <a class="navbar-link" onclick="toggleOverlay2()" id="toggle-element">
+                        <img src="icons/icon-power.svg">
+                    </a>
+                    <span class="hover-text">Inici/Apagar</span>
+
+                </div>
                 <div id="overlay-2">
                     <li class="power-nav side">
                         <ul> <a href="index.html">
@@ -325,7 +338,6 @@
                 </div>
             </div>
         </header>
-
 
 
 

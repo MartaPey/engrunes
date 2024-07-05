@@ -190,13 +190,13 @@
                                     <img src="images/capitol1/0100801.PNG">
                                     <img src="images/capitol1/0100802.PNG">
                                     <div class="bafarades">
-                                        <div >
+                                        <div>
                                             <img class="baf-img left" src="images/capitol1/bafarada001201.png" style="position:absolute;width:20%;margin-left:9%;">
-                                            
+
 
                                             <img class="baf-img right" src="images/capitol1/bafarada001203.png" style="position:absolute;right:14%;margin-top:7%;width:20%;">
-                                        
-                                        
+
+
                                             <img class="baf-img center" src="images/capitol1/bafarada001202.png" style="position:absolute;margin-top:18%;width:19%;margin-left:12%;">
                                             <img class="baf-img right" src="images/capitol1/bafarada001204.png" style="position:absolute;right:0;margin-top:20%;width:20%;">
                                             <img class="baf-img center" src="images/capitol1/bafarada001205.png" style="position:absolute; margin-left:30%;margin-top:49%;width:16%;">
@@ -243,9 +243,10 @@
                                     <img class="image-guardiola" src="images/capitol1/0101101.PNG" id="guardiola1">
 
                                     <img class="guardiola" src="images/capitol1/0101105.GIF" id="guardiola2" style="width:100%;">
-                                    <a class="navbar-link" onclick="toggleImages1()" id="toggle-element" style="width:fit-content; align-self: center;background:var(--lila);align-items: center;justify-content: center;gap:0.5rem;color:var(--color-text)">
+                                    <a class="navbar-link" onclick="toggleImages1()" id="toggle-element" style="width:fit-content; align-self: center;background:var(--lila);align-items: center;justify-content: center;gap:0.5rem;">
                                         <img class="candau-1" src="icons/icon-lock-closed.svg" id="candau1">
-                                        Obrir
+                                        <p style="color:var(--color-text)">Obrir</p>
+
                                     </a>
                                     <img class="baf-img center" src="images/capitol1/bafarada0019.png" style="margin-top: 20%; width:10%;margin-bottom:20%;">
 
@@ -269,7 +270,7 @@
                                     <img class="guardiola" src="images/capitol1/0101302.PNG" id="radiografia2">
                                     <div class="bafarades">
                                         <a class="navbar-link" onclick="toggleImages2()" id="toggle-element" style="width:fit-content; align-self: center;background:var(--lila);align-items: center;justify-content: center;gap:0.5rem;color:var(--color-text);margin-bottom:-10%;">
-                                            Veure notes
+                                            <p>Veure notes</p>
 
                                         </a>
                                     </div>
@@ -432,8 +433,8 @@
 
                                     <div class="bafarades">
                                         <img class="baf-img center" src="images/capitol1/bafarada0040.png" style=" margin-top:14%; width:27%;">
-                                        <img class="baf-img center" src="images/capitol1/bafarada0041.png" style="margin-top:12%;width:25%;margin-left:2%;">
-                                        <img class="baf-img left" src="images/capitol1/bafarada0042.png" style="margin-top:26%;margin-left:10%;width:32%;"></div>
+                                        <img class="baf-img center" src="images/capitol1/bafarada0041.png" style="margin-top:11%;width:29%;margin-left:2%;">
+                                        <img class="baf-img left" src="images/capitol1/bafarada0042.png" style="margin-top:20%;margin-left:10%;width:32%;"></div>
 
 
 
@@ -447,30 +448,38 @@
                                             <img class="baf-img left" src="images/capitol1/bafarada0043.png" style=" margin-top:7%; margin-left:23%;width:18%;">
                                             <img class="baf-img left" src="images/capitol1/bafarada0044.png" style="margin-top:0%;width:19%;margin-left:28%;">
                                         </div>
-                                        <img class="baf-img center" src="images/capitol1/bafarada0045.png" style="margin-top:61%;margin-left:7%;width:27%;">
-                                        <a class="habilitats-button" onclick="Habilitats"><img src="icons/icon-heart.svg" ></a>
-                                        <div class="habilitats" id="overlay-habilitats">
-                                            <h3>Habilitats Ema</h3>
-                                            <div class="habilitat"> 
-                                                <p>Paciència: 80%</p>
-                                                <div class="barra-habilitat">
-                                                <div class="barra-habilitat omplert"  style="width:80%;"></div></div>
-                                            </div>
-                                             <div class="habilitat"> 
-                                                <p>Escoltar: 60%</p>
-                                                <div class="barra-habilitat">
-                                                <div class="barra-habilitat omplert" style="width:60%;"></div></div>
-                                            </div>
-                                        
-                                             <div class="habilitat"> 
-                                                <p>Argumentar: 70%</p>
-                                                <div class="barra-habilitat">
-                                                <div class="barra-habilitat omplert" style="width:70%;"></div></div>
-                                            </div>
-                                             <div class="habilitat"> 
-                                                <p>Defensa ràpida: 40%</p>
-                                                <div class="barra-habilitat">
-                                                <div class="barra-habilitat omplert" style="width:40%;"></div></div>
+                                        <img class="baf-img center" src="images/capitol1/bafarada0045.png" style="margin-top:58.5%;margin-left:7%;width:27%;">
+                                        <div style="display:flex; flex-direction: column;position:absolute;right:0;align-items: flex-end; gap:0.5rem; margin-top:20%; margin-right:8%;">
+                                            <a class="habilitats-button" onclick="Habilitats"><img src="icons/icon-star.svg">
+                                                <p>Habilitats </p>
+                                            </a>
+                                            <div class="habilitats" id="overlay-habilitats">
+
+                                                <div class="habilitat">
+                                                    <p>Paciència: 80%</p>
+                                                    <div class="barra-habilitat">
+                                                        <div class="barra-habilitat omplert" style="width:80%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="habilitat">
+                                                    <p>Escoltar: 60%</p>
+                                                    <div class="barra-habilitat">
+                                                        <div class="barra-habilitat omplert" style="width:60%;"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="habilitat">
+                                                    <p>Argumentar: 70%</p>
+                                                    <div class="barra-habilitat">
+                                                        <div class="barra-habilitat omplert" style="width:70%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="habilitat">
+                                                    <p>Defensa ràpida: 40%</p>
+                                                    <div class="barra-habilitat">
+                                                        <div class="barra-habilitat omplert" style="width:40%;"></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -485,7 +494,7 @@
 
 
                                         <img class="baf-img right" src="images/capitol1/bafarada0046.png" style=" margin-top:17%; margin-right:15%;width:22%;">
-                                        <img class="baf-img left" src="images/capitol1/bafarada0047.png" style="margin-top:37%;width:20%;margin-left:20%;width:9%;">
+                                        <img class="baf-img left" src="images/capitol1/bafarada0047.png" style="margin-top:36%;margin-left:21.5%;width:5.5%;">
 
                                     </div>
 
@@ -537,7 +546,7 @@
 
                     <div class="header-arxius" id=draggable-header>
                         <div style="display:flex;align-items: center; gap:1rem;">
-                            <img src="icons/icon-folders.svg">
+                            <img src="icons/icon-folders.svg" style=" filter: var(--filter-icons);">
 
                             <p>Capítols</p>
                         </div>
@@ -666,44 +675,59 @@
                     </div>
                 </div>
             </div>
-</div>
-        
+        </div>
+
         <header class="header">
             <div class="header-display">
 
 
 
 
+                <div class="button-container">
+                    <a href="escriptori.html" class="navbar-link">
+                        <img src="icons/icon-home.svg">
 
-                <a href="escriptori.html" class="navbar-link" >
-                    <img src="icons/icon-home.svg">
+                    </a>
+                    <span class="hover-text">Escriptori</span>
+                </div>
 
-                </a>
+                <div class="button-container">
 
+                    <a class="navbar-link" id="mode-toggle-button">
+                        <img src="icons/icon-mode.svg">
 
+                    </a>
+                    <span class="hover-text">Mode</span>
+                </div>
 
+                <div class="button-container">
+                    <a class="navbar-link active" onclick="toggleOverlay()">
+                        <img src="icons/icon-folders.svg">
 
-                <a class="navbar-link" id="mode-toggle-button">
-                    <img src="icons/icon-mode.svg">
+                    </a>
+                    <span class="hover-text">Capítols</span>
+                </div>
 
-                </a>
-                <a class="navbar-link active" onclick="toggleOverlay()">
-                    <img src="icons/icon-folders.svg">
+                <div class="button-container">
 
-                </a>
-
-                <a href="https://www.instagram.com/martapey.art" target="_blank" class="navbar-link">
-                    <img src="icons/icon-instagram.svg">
-
-                </a>
-
-
-
-                <a class="navbar-link" onclick="toggleOverlay2()" id="toggle-element">
-                    <img src="icons/icon-power.svg">
-                </a>
+                    <a href="https://www.instagram.com/martapey.art" target="_blank" class="navbar-link">
+                        <img src="icons/icon-instagram.svg">
 
 
+                    </a>
+                    <span class="hover-text">Instagram</span>
+                </div>
+
+                <div class="button-container">
+
+
+
+                    <a class="navbar-link" onclick="toggleOverlay2()" id="toggle-element">
+                        <img src="icons/icon-power.svg">
+                    </a>
+                    <span class="hover-text">Inici/Apagar</span>
+
+                </div>
                 <div id="overlay-2">
                     <li class="power-nav side">
                         <ul> <a href="index.html">
