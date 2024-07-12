@@ -19,7 +19,7 @@
     --lila: #914EFF;
     --transparent-light: #b9b9b950;
     --ombra01: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    --fons-portada: url(images/IMG_1288.PNG);
+    --fons-portada: url(images/IMG_1288.png);
     --foto-portada: url(images/portada_light.PNG);
     --grey: #e3e3e3;
 
@@ -34,7 +34,7 @@
     --color-text: #ffffff;
     --filter-icons: invert(100%);
     --filter-negative: none;
-    --fons-portada: url(images/IMG_1288.PNG);
+    --fons-portada: url(images/IMG_1288.png);
     --foto-portada: url(images/dark.PNG);
     --grey: #525252;
 }
