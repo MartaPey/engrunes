@@ -19,9 +19,12 @@
     --lila: #914EFF;
     --transparent-light: #b9b9b950;
     --ombra01: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    --fons-portada: url(images/IMG_1288.png);
+    --fons-portada: url(images/portada_light04.PNG) #ffffffa6;
     --foto-portada: url(images/portada_light.PNG);
     --grey: #e3e3e3;
+    --filter-portada: lighten;
+    
+    
 
 }
 
@@ -34,9 +37,10 @@
     --color-text: #ffffff;
     --filter-icons: invert(100%);
     --filter-negative: none;
-    --fons-portada: url(images/IMG_1288.png);
+    --fons-portada: url(images/portada_dark04.PNG) #000000a6;
     --foto-portada: url(images/dark.PNG);
     --grey: #525252;
+    --filter-portada:darken;
 }
 
 
@@ -407,7 +411,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--fons-portada);
+    background: var(--fons-portada) ;
+    background-blend-mode: var(--filter-portada);
     background-position: flex-start;
     background-size: cover;
 }
@@ -430,10 +435,10 @@ main {
     align-items: center;
     width: fit-content;
     gap: 1rem;
-    position: absolute;
+    position: fixed;
     align-self: flex-start;
-    margin-top: 10%;
-    margin-left: 10%;
+    top:15vh;
+    left: 20%;
 }
 
 .carpeta-escriptori:hover {
@@ -448,8 +453,10 @@ main {
     align-items: flex-end;
     left: 5.3rem;
     right: 1rem;
-    top: 1rem;
+   top:1rem;
     bottom: 1rem;
+    justify-content: flex-end;
+   
 
 
 }
@@ -467,8 +474,9 @@ main {
     gap: 1rem;
     bottom: 0;
     right: 0;
-    margin: 1rem;
+    margin: 2rem;
     box-shadow: var(--ombra01);
+    overflow: hidden;
 
 }
 
@@ -525,15 +533,20 @@ main {
 
 .escritorio .logo-fons {
     position: absolute;
-    width: 50%;
+    width: 50vh;
     margin: 0;
+    
+   
 
+}
+.escritorio .logo-fons img{
+     color:black;
 }
 
 .hora-escriptori {
     width: fit-content;
     right: 2rem;
-    top: 2rem;
+    top: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -1240,10 +1253,18 @@ input[type=range]::-moz-range-thumb {
         height: 100%;
 
     }
+    .escritorio .logo-fons {
+    position: absolute;
+    width: 50%;
+    margin: 0;
+        bottom:15%;
+        right:auto;
+
+}
 
     .hora-escriptori {
         width: -webkit-fill-available;
-        margin-top: 20%;
+        margin-top: 10%;
         align-items: center;
     }
 
@@ -1424,8 +1445,10 @@ input[type=range]::-moz-range-thumb {
 
     .carpeta-escriptori {
         position: relative;
-        margin-left: 1rem;
-        margin-top: 1rem;
+        left:2rem;
+        bottom:auto;
+        top:auto;
+       
         padding: 0;
 
     }
